@@ -1,4 +1,3 @@
-import Aura from '@primevue/themes/aura'
 import { AppTheme } from './config/primevue'
 import { appDescription } from './shared/constants'
 
@@ -15,8 +14,8 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     'dayjs-nuxt',
     '@nuxt/fonts',
-    '@hebilicious/vue-query-nuxt',
     '@primevue/nuxt-module',
+    '@peterbud/nuxt-query',
   ],
 
   ssr: true,
@@ -74,10 +73,6 @@ export default defineNuxtConfig({
     transpile: ['nuxt', 'primevue', '@primevue/themes'],
   },
 
-  future: {
-    compatibilityVersion: 4,
-  },
-
   experimental: {
     // when using generate, payload js assets included in sw precache manifest
     // but missing on offline, disabling extraction it until fixed
@@ -100,16 +95,6 @@ export default defineNuxtConfig({
     },
     experimental: {
       openAPI: true,
-    },
-  },
-
-  vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          api: 'modern',
-        },
-      },
     },
   },
 
@@ -152,10 +137,8 @@ export default defineNuxtConfig({
       // files: [{path: 'zh.ts',cache: false}],
       name: '中文',
     }],
-    // TODO:
-    // baseUrl: '',
+    baseUrl: '/',
     defaultLocale: 'en',
-    lazy: true,
     strategy: 'no_prefix',
     detectBrowserLanguage: {
       useCookie: true,
@@ -164,6 +147,12 @@ export default defineNuxtConfig({
     },
     vueI18n: './config/i18n.ts',
   },
+
+  nuxtQuery: {
+    autoImports: ['useQuery', 'useQueryClient', 'useMutation'],
+    devtools: true,
+  },
+
   primevue: {
     directives: {
       include: '*',
