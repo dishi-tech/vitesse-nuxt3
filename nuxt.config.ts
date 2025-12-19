@@ -1,4 +1,3 @@
-import { AppTheme } from './config/primevue'
 import { appDescription } from './shared/constants'
 
 // '@vite-pwa/nuxt'
@@ -14,7 +13,6 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     'dayjs-nuxt',
     '@nuxt/fonts',
-    '@primevue/nuxt-module',
     '@peterbud/nuxt-query',
   ],
 
@@ -30,6 +28,7 @@ export default defineNuxtConfig({
           'watchImmediate',
           'useElementVisibility',
           'useWindowScroll',
+          'useLocalStorage',
           // ...
         ],
       },
@@ -70,7 +69,7 @@ export default defineNuxtConfig({
     },
   },
   build: {
-    transpile: ['nuxt', 'primevue', '@primevue/themes'],
+    transpile: ['nuxt'],
   },
 
   experimental: {
@@ -151,18 +150,6 @@ export default defineNuxtConfig({
   nuxtQuery: {
     autoImports: ['useQuery', 'useQueryClient', 'useMutation'],
     devtools: true,
-  },
-
-  primevue: {
-    directives: {
-      include: '*',
-    },
-    options: {
-      ripple: true,
-      theme: AppTheme,
-
-    },
-    autoImport: true,
   },
 
   tailwindcss: {

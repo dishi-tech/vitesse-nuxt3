@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const colorMode = useColorMode()
 const { locale } = useI18n()
 </script>
 
@@ -8,10 +7,6 @@ const { locale } = useI18n()
     <h1 class="font-bold">
       {{ $t('current', { lang: locale }) }}
     </h1>
-    <Button>{{ $t('welcome') }}</Button>
-    <Button @click="colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'">
-      Dark toggle
-    </Button>
   </div>
 </template>
 

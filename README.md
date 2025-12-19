@@ -29,8 +29,6 @@
 
 - 📲 [PWA](https://github.com/vite-pwa/nuxt) with offline support and auto-update behavior.
 
-- 🎨 [PrimeVue](https://primevue.org/) - The Most Complete Vue UI Component Library.
-
 - 📦 [Nuxt Query](https://tanstack.com/query/v4/docs/framework/vue/overview) - Powerful asynchronous state management, server-state utilities and more.
 
 - 🎨 [Icons](https://nuxt.com/modules/icon) - Icons for Nuxt.

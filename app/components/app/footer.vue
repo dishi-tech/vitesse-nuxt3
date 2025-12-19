@@ -1,5 +1,5 @@
 <template>
   <footer class="footer">
-    <DarkToggle />
+    Footer
   </footer>
 </template>
